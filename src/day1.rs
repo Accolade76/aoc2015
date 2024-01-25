@@ -17,7 +17,7 @@ mod elevator_code {
         use super::*;
 
         #[test]
-        fn apartment_lift_floor() {
+        fn does_lift_reach_correct_floor() {
             assert_eq!(1, elevator("("));
             assert_eq!(2, elevator("(("));
             assert_eq!(1, elevator("(()"));

@@ -21,6 +21,9 @@ mod elevator_code {
             assert_eq!(1, elevator("("));
             assert_eq!(2, elevator("(("));
             assert_eq!(1, elevator("(()"));
+            assert_eq!(0, elevator("(())"));
+            assert_eq!(3, elevator("))((((("));
+            assert_eq!(-3, elevator(")())())"));
         }
     }
 }

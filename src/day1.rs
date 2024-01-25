@@ -1,16 +1,15 @@
 mod elevator_code {
     fn elevator(instructions: &str) -> i32 {
-        let floor = 0;
-        if instructions == "(" {
-            return floor + 1;
+        let mut floor = 0;
+        for i in instructions.chars() {
+            if i == '(' {
+                floor = floor + 1;
+            }
+            if i == ')' {
+                floor = floor - 1;
+            }
         }
-        if instructions == "((" {
-            return 2;
-        }
-        if instructions == "(()" {
-            return 1;
-        }
-        0
+        floor
     }
 
     #[cfg(test)]
